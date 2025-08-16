@@ -1,2 +1,18 @@
-# C-program-
-C programs
+# C-program
+#include<stdio.h>
+int main()
+{
+    int amnt;
+    printf("enter Total amount:");
+    scanf("%d",&amnt);
+    int rs100=amnt/100;
+    amnt=amnt-(rs100*100);
+    int rs50=amnt/50;
+    amnt=amnt-(rs50*50);
+    int rs10=amnt/10;
+    amnt=amnt-(rs10*10);
+    printf("no. of rs 100:%d",rs100);
+    printf("no. of rs 50:%d",rs50);
+    printf("no. of rs 10:%d",rs10);
+    return 0;
+    }
