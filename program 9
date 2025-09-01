@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main ()
+{
+    int amnt,total,r500,r100;
+    printf("enter amount to withdraw");
+    scanf("%d",&amnt);
+    
+    if (amnt%100!=0)
+    {
+        printf("only rs 500 and rs 100 notes are available");
+    }
+    else
+    {
+        printf("enter Total amnt");
+        scanf("%d",&total);
+       if (total-amnt<1000)
+       {
+           printf("you have reached min balance");
+       }
+       else
+       {
+           r500=amnt/500;
+           amnt=amnt-r500*500;
+           r100=amnt/100;
+           amnt=amnt-r100*100;
+           printf("no. of rs 500 notes:%d\n",r500);
+           printf("no. of rs 100 notes:%d\n",r100);
+           printf("total balance%d",amnt);
+           return 0;
+       }
+       
+    }
+}
