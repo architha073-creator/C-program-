@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main ()
+{
+    char name;
+    printf("enter");
+    scanf("%c",&name);
+    if ((name>='A'&& name<='Z')||(name>='a'&& name<='z'))
+     {
+        printf("alpha");
+        if (name>='A'&& name<='Z')
+        {
+            printf("uppercase");
+        }
+        else 
+         {    
+             printf("lowercase");
+          }   
+          if ((name=='A')||(name=='I')||(name=='E')||(name=='O')||(name=='U')||(name=='a')||(name=='e')||(name=='i')||(name=='o')||(name=='u'))
+          {
+              printf("vowel");
+          }
+          else 
+          {
+              printf("consonant");
+          }
+     }     
+    else if(name>='0'&& name<='9') 
+    {   
+        printf("digit");
+    }
+    else
+    {
+        printf("special ch");
+    }
+    return 0;
+}    
+    
