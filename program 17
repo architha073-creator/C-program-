@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+// b) Global variable
+int globalVar = 50;
+
+void demonstrateStatic() {
+    // a) Static variable
+    static int counter = 0;   // Initialized only once, value persists
+    counter++;
+    printf("Static variable counter: %d\n", counter);
+}
+
+int main() {
+    // --- Demonstrating Static Variable ---
+    printf("Demonstrating static variable:\n");
+    demonstrateStatic();
+    demonstrateStatic();
+    demonstrateStatic();
+
+    // --- Demonstrating Extern Variable ---
+    printf("\nDemonstrating extern variable:\n");
+    extern int globalVar;   // Declared again with extern
+    printf("Initial value of extern (global) variable: %d\n", globalVar);
+
+    globalVar += 25;  // Modify global variable
+    printf("Modified value of extern (global) variable: %d\n", globalVar);
+
+    return 0;
+}
