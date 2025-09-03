@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    // a) Auto variable (default storage class for local variables)
+    auto int a;   // same as just "int a;"
+    a = 15;
+
+    printf("Initial value of auto variable a: %d\n", a);
+
+    a += 15;  // modify the value
+    printf("Modified value of auto variable a: %d\n", a);
+
+    printf("Address of auto variable a: %p\n", (void*)&a);
+
+    // b) Register variable
+    register int r;
+    r = 20;
+
+    printf("Value of register variable r: %d\n", r);
+
+    // Trying to print address of register variable
+    // printf("Address of register variable r: %p\n", (void*)&r);
+    // ↑ Uncommenting this line will cause a compiler error
+
+    return 0;
+}
