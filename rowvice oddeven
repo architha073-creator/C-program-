@@ -1,0 +1,39 @@
+include<stdio.h>
+
+int main()
+{    
+    int i,j,mark[2][3],eve[6],odd[6],z[6];
+    printf("enter elements :");
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            scanf("%d",& mark[i][j]);
+        }
+    }
+    for(i=0;i<2;i++)
+    {
+        z[i]=0;
+        eve[i]=0;
+        odd[i]=0;
+        for(j=0;j<3;j++)
+        {
+            if (mark[i][j]==0)
+            {
+                z[i]++;
+            }
+            else if (mark[i][j]%2==0)
+            {
+                eve[i]++;
+            }
+            else
+            {
+                odd[i]++;
+            }
+        }
+        printf("Even no=%d\n odd no=%d\n zero=%d\n",eve[i],odd[i],z[i]);
+        
+    }
+    
+    return 0 ;
+}
