@@ -1,0 +1,26 @@
+#include <stdio.h>
+int isStrictAscending(int num) {
+ int prevDigit = 10; // greater than any digit
+ while (num > 0) {
+ int d = num % 10;
+ if (d >= prevDigit) // from right to left, must be strictly smaller
+ return 0;
+ prevDigit = d;
+ num /= 10;
+ }
+ return 1;
+}
+int main() {
+ int count = 0;
+ int i;
+ for (i = 1; i <= 1000; i++) {
+ if (isStrictAscending(i))
+ count++;
+ }
+ printf("%d\n", count);
+ // Answer (sample run):
+ // Output (only one value printed):
+ // 129
+ // (This is the count of numbers from 1 to 1000 with strictly ascending digits.)
+ return 0;
+}
