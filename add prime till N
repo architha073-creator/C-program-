@@ -1,0 +1,30 @@
+#include <stdio.h>
+isPrime(current){
+    for(int i=2;i<(current/2);i++)
+    {
+        if(current%i==0)
+            return 0 ;
+    }
+    return 1;
+}
+int main() {
+ int N, M;
+ scanf("%d %d", &N, &M);
+ int sum = 0;
+ int count = 0;
+ int current = N;
+ while (sum <= M) {
+ current++;
+ if (isPrime(current)) {
+ sum += current;
+ count++;
+ }
+ }
+ printf("%d\n", count);
+ // Answer (sample run):
+ // Input :
+ // 10 150
+ // Output:
+ // 8
+ return 0;
+ }
